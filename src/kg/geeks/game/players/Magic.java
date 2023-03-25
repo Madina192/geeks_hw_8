@@ -15,6 +15,5 @@ public class Magic extends Hero {
                 heroes[i].setDamage(heroes[i].getDamage() + numberToAdd);
             }
         }
-        boss.setHealth(boss.getHealth() - this.getDamage());
     }
 }
