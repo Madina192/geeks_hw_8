@@ -5,17 +5,21 @@ import kg.geeks.game.players.*;
 import java.util.Random;
 
 public class RPG_Game {
-    private static int roundNumber;
+    public static int roundNumber;
+
     public static Random random = new Random();
 
     public static void startGame() {
-        Boss boss = new Boss(1000, 50, "Evil");
+        Boss boss = new Boss(1800, 50, "Evil");
         Warrior warrior = new Warrior(270, 10, "Ahiles");
         Medic doc = new Medic(250, 5, 15, "Aibolit");
-        Magic magic = new Magic(280, 20, "Handel");
         Berserk berserk = new Berserk(290, 15, "Takashi");
-        Medic assistant = new Medic(300, 5, 5, "Strange");
-        Hero[] heroes = {warrior, doc, magic, berserk, assistant};
+        Hacker hacker = new Hacker(260, 10,  "Hacker");
+        Samurai samurai = new Samurai(280, 0,  "Samurai");
+        Bomber bomber = new Bomber(350, 5,  "Bomber");
+        Medic assistant = new Medic(250, 5, 5, "Strange");
+        Magic magic = new Magic(240, 20, "Handel");
+        Hero[] heroes = {warrior, doc, berserk, hacker, samurai, bomber, assistant, magic};
 
         printStatistics(boss, heroes);
         while (!isGameFinished(boss, heroes)) {
